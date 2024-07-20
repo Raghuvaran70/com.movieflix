@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>All Movies</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/viewmoviesuser.css}">
+<style>
+	
+	
+	 
+
+</style>
+
+</head>
+<body>
+	 <nav>
+        
+            <label class="logo">MovieFlix</label>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="logout">Logout</a></li>
+            </ul>
+        
+    </nav>
+	<div class="container">
+	<h1>All Movies</h1>
+	
+	<div class="movie-grid">
+		<div class="movie-item" th:each="movies:${movies}">
+			<h3 th:text="${movies.moviename}">Movie name</h3>
+			<div class="movie-video"><iframe th:src="${movies.movieLink}"></iframe></div>
+		</div>
+	
+	</div>
+	</div>
+</body>
+</html>

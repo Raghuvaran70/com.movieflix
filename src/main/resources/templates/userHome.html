@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/userHome.css}">
+</head>
+<body>
+
+	<nav>
+        
+        <label class="logo">MovieFlix</label>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="logout">Logout</a></li>
+        </ul>
+    
+    </nav>
+    <div class="container">
+    <h1>Welcome to MovieFlix <p th:text="${user.name}"></p></h1>
+		<div class="links">
+		<a href="exploremovies">Explore Movies</a>
+		<!-- <br><br> -->
+		<a th:href="@{/update(id=${user.emailId})}">Update Profile</a>
+		<!-- <br><br> -->
+		<a href="logout">Logout</a>
+		<!-- <br><br> -->
+    </div>
+    </div>
+		<!--  <h1>Welcome to MovieFlix User</h1>
+		
+		<a href="exploremovies"><input type="submit" value="Explore Movies"></a>
+		<br><br>
+		<a href="update"><input type="updateProfile" value="Update Profile"></a>
+		<br><br>
+		
+		<a href=""><input type="submit" value="Logout"></a>
+		<br><br>
+		-->
+</body>
+</html>

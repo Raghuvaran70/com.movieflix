@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>Movie Name</th>
+			<th>Movie link</th>
+			<th>Genre</th>
+			<th>Cost</th>
+			<th>Director Name</th>
+			<th></th>
+		</tr>	
+		<tr th:each="movies:${movies}">
+			<td th:text="${movies.id}"></td>
+			<td th:text="${movies.moviename}"></td>
+			<td><iframe th:src="${movies.movieLink}" style="height:400px;width:500px;" title="Hello"></iframe>
+				
+			</td>
+			<td th:text="${movies.genre}"></td>
+			<td th:text="${movies.cost}"></td>
+			<td th:text="${movies.directorName}"></td>
+			
+		</tr>
+	</table>
+	
+</body>
+</html>

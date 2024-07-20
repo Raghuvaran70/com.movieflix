@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/login.css}">
+</head>
+<body>
+	 <nav>
+        
+        <label class="logo">MovieFlix</label>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="map_signup">Register</a></li>
+        </ul>
+    
+    </nav>
+	<div class="container">
+        <form action="login" method="post">
+        <h1>Login</h1>
+        <div class="input-box">
+            <label class="paceholder email">Email Id</label>
+            <input type="text" name="emailId" required>
+        </div>
+        <div class="input-box">
+            <label class="paceholder password">Password</label>
+            <input type="password" name="password" required>
+        </div>
+        <input type="submit" value="Login" class="btn">
+        <p>Not Registered yet? <a href="">Register</a></p>
+    </form>
+    </div>
+	
+	
+	
+	<!--  <form action="login" method="post">
+		<label>Email : </label>
+		<input type="email" name="emailId">
+		<br><br>
+		<label>Password : </label>
+		<input type="password" name="password">
+		<br><br>
+		<input type="submit"> 
+	</form>
+	-->
+</body>
+</html>

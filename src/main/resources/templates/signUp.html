@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/signUp.css}">
+</head>
+<body>
+	 <nav>
+        
+            <label class="logo">MovieFlix</label>
+            <ul>
+                <li><a href="map_home">Home</a></li>
+                <li><a href="map_login">Login</a></li>
+            </ul>
+        
+    </nav>
+		
+	<div class="container">
+        <div class="wrapper"></div>
+        <div class="box">
+        <h1>Registration Form</h1>
+        <form action="register" method="post">
+            <div class="input-box">
+                <label>Full name</label>
+                <input type="text" placeholder="Enter your name" class="input" name="name"> 
+            </div>
+
+            <div class="input-box">
+                <label>Email Id</label>
+                <input type="text" placeholder="Enter your email id" class="input" name="emailId"> 
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" class="input" name="password"> 
+            </div>
+
+            <div class="input-box">
+                <label>Phone Number</label>
+                <input type="number" placeholder="Enter your mobile number" class="input" name="phoneNo">  
+            </div>
+
+            <div class="input-box">
+                <label>Gender</label>
+                <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female
+                <input type="radio" name="gender">Prefer not to say
+            </div>
+
+            <div class="input-box">
+                <label>Address</label>
+                <textarea name="address"></textarea> 
+            </div>
+
+            <div class="btn">
+                <input type="submit" value="Register">
+            </div>
+            <div class="login">
+                <p>Already Registered?</p><a href="">Login</a>
+            </div>
+        </form>
+        </div>
+    </div>
+	
+	<!--  <form action="register" method="post">
+		<h1>Enter Your Details</h1>
+		<label>Name : </label><br>
+		<input type="text" name="name">
+		<br><br>
+		<label>Email : </label><br>
+		<input type="email" name="emailId">
+		<br><br>
+		<label>Password : </label><br>
+		<input type="password" name="password">
+		<br><br>
+		<label>Gender : </label><br>
+		<input type="radio" name="gender" value="Male">M
+		<input type="radio" name="gender" value="Female">F
+		<input type="radio" name="gender" value="Other">O
+		<br><br>
+		<label>Phone Number : </label><br>
+		<input type="text" name="phoneNo">
+		<br><br>
+		<label>Address : </label><br>
+		<textarea rows="5" cols="25" name="address"></textarea>
+		<br><br>
+		<input type="submit" value="register">
+	</form>
+	-->
+</body>
+</html>

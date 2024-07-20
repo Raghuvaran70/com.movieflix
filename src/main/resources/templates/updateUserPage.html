@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/updateUserPage.css}">
+</head>
+<body>
+	 <nav>
+        
+            <label class="logo">MovieFlix</label>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="logout">Logout</a></li>
+            </ul>
+        
+    </nav>
+	<div class="container">
+        <h1>Update User Details</h1>
+    <form action="updateUser" method="post">
+        <label>Name</label>
+		<input type="text" th:value="${user.name}" name="name">
+		<br><br>
+        <label>Email id</label>
+		<input readonly type="text" th:value="${user.emailId}" name="emailId">
+		<br><br>
+		<label>Name</label>
+		<input type="password" th:value="${user.password}" name="password">
+		<br><br>
+		<label>phone number</label>
+		<input type="number" th:value="${user.phoneNo}" name="phoneNo">
+		<br><br>
+		<label>Gender : </label>
+		<input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <input type="radio" name="gender" value="Other">Other
+		<label>Address</label>
+		<textarea th:text="${user.address}" name="address"></textarea>
+		<br><br>
+        <input type="submit" value="Update" class="btn">
+    </form>
+    </div>
+		
+</body>
+</html>

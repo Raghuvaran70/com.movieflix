@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<link rel="stylesheet" type="text/css" th:href="@{/css/addMoviePage.css}">
+<body>
+		<nav>
+        
+        <label class="logo">MovieFlix</label>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="logout">Logout</a></li>
+        </ul>
+    
+    </nav>
+	<div class="container">
+    <h1>Add Movie</h1>
+	<form action="add_Movie" method="post">
+		<label>Name Of The Movie : </label>
+		<input type="text" name="moviename">
+		<br><br>
+		<label>Movie Link : </label>
+		<input type="text" name="movieLink">
+		<br><br>
+		<label>Genre : </label>
+		<input type="text" name="genre">
+		<br><br>
+		<label>Budget For the Movie: </label>
+		<input type="number" name="cost">
+		<br><br>
+		 <label>Director Name : </label>
+		<input type="text" name="directorName">
+		<br><br>
+		<input type="submit" class="btn"> 
+	</form>
+	</div>
+	<!--  <h1>Add Movie</h1>
+	<form action="add_Movie" method="post">
+		<label>Name Of The Movie : </label>
+		<input type="text" name="moviename">
+		<br><br>
+		<label>Movie Link : </label>
+		<input type="text" name="movieLink">
+		<br><br>
+		<label>Genre : </label>
+		<input type="text" name="genre">
+		<br><br>
+		<label>Budget For the Movie: </label>
+		<input type="number" name="cost">
+		<br><br>
+		 <label>Director Name : </label>
+		<input type="text" name="directorName">
+		<br><br>
+		<input type="submit"> 
+	</form>
+	-->
+</body>
+</html>

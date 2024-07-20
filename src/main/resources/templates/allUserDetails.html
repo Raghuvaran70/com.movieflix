@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/allUserDetails.css}">
+</head>
+<body>
+		<nav>
+        
+		<label class="logo">MovieFlix</label>
+		<ul>
+			<li><a href="home">Home</a></li>
+			<li><a href="logout">Logout</a></li>
+		</ul>
+	
+</nav>
+	<div class="container">
+    <table class="content-table">
+		<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email id</th>
+			<th>Phone Number</th>
+			<th>Gender</th>
+			<th>Address</th>
+			<th>Action</th>
+		</tr>
+		</thead>
+        <tbody>
+		<tr th:each="users:${users}">
+			<td th:text="${users.name}"></td>
+			<td th:text="${users.emailId}"></td>
+			<td th:text="${users.phoneNo}"></td>
+			<td th:text="${users.gender}"></td>
+			<td th:text="${users.address}"></td>
+			<td class="btn">
+                <a th:href="@{/update(id=${users.emailId})}">Update</a>
+                <a th:href="@{/map_deleteuser(id=${users.emailId})}">Delete</a>
+            </td>
+
+		</tr>
+        </tbody>
+	</table>
+    </div>
+    
+	<!--  <table border="1">
+		<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email id</th>
+			<th>Phone Number</th>
+			<th>Gender</th>
+			<th>Address</th>
+			<th>Action</th>
+		</tr>
+		</thead>
+		<tr th:each="users:${users}">
+			<td th:text="${users.name}"></td>
+			<td th:text="${users.emailId}"></td>
+			<td th:text="${users.phoneNo}"></td>
+			<td th:text="${users.gender}"></td>
+			<td th:text="${users.address}"></td>
+			<td><a th:href="@{/update(id=${users.emailId})}">Update</a></td>
+		</tr>
+	</table>
+	-->
+</body>
+</html>
